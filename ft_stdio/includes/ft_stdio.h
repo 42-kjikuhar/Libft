@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stdio.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
+/*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 20:59:56 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/07/14 16:45:55 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/12/10 16:29:45 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@
 
 typedef struct
 {
-	int				fd;			// 実際の write() に使う FD
-	char			*buf;		// 出力バッファ
-	size_t			buf_size;	// バッファ容量
-	size_t			pos;		// buf 中の現在位置
-	int 			flags;		// EOF/ERR やバッファモード
-	pthread_mutex_t	lock;		// 排他制御用ミューテックス
+	int				fd;
+	char			*buf;
+	size_t			buf_size;
+	size_t			pos;
+	int 			flags;
+	pthread_mutex_t	lock;
 }			file_t;
 
 int		ft_getchar(void);

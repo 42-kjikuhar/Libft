@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
+/*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 19:28:19 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/07/14 09:24:59 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/12/10 16:28:40 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,27 +33,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char	str[] = "Hello, World!";
-// 	char	overlap1[] = "abcdefghijkl";
-// 	char	overlap2[] = "0123456789";
-
-// 	// Copy without overlap
-// 	printf("Original string: %s\n", str);
-// 	ft_memmove(str + 7, "42Tokyo", 7);
-// 	printf("After memmove: %s\n", str);
-
-// 	// Copy with overlap (forward copy)
-// 	ft_memmove(overlap1 + 3, overlap1, 4);
-// 	printf("Overlapping copy (forward): %s\n", overlap1);
-
-// 	// Copy with overlap (backward copy)
-// 	ft_memmove(overlap2, overlap2 + 2, 5);
-// 	printf("Overlapping copy (backward): %s\n", overlap2);
-
-// 	return (0);
-// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
+/*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:57:28 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/07/14 09:26:57 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/12/10 16:28:12 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	rtv_str[index] = '\0';
 	return (rtv_str);
 }
-
-// #include <stdio.h>
-
-// char	convert_to_upper(unsigned int index, char c)
-// {
-// 	(void)index;
-// 	if ('a' <= c && c <= 'z')
-// 		return (c - 'a' + 'A');
-// 	return (c);
-// }
-
-// int main(void)
-// {
-// 	char *str = "42Tokyo";
-// 	printf("%zu\n", ft_strlen_(str));
-
-// 	char *convert_str = ft_strmapi(str, convert_to_upper);
-// 	printf("%s\n", convert_str);
-// 	free(convert_str);
-// 	return (0);
-// }
