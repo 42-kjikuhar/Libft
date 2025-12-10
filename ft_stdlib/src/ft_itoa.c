@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
+/*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 11:55:06 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/07/14 17:01:06 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/12/10 16:32:11 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,20 +77,3 @@ char	*ft_itoa(int n)
 	dest_str[i] = n % 10 + '0';
 	return (dest_str);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int	number_set[] = {0, 1, -1, -10, 10, -11, 2147483647, 2147483647,
-// 	-2147483648, -2147483648, 1234567};
-// 	for (int i = 0; i < (sizeof(number_set) / sizeof(number_set[0])); i++)
-// 	{
-// 		char *number_char = ft_itoa(number_set[i]);
-// 		printf("%d : %11d : %d\n",i, number_set[i], number_len(number_set[i]));
-// 		printf("%d : %11d : %s\n\n",i, number_set[i], number_char);
-// 		free(number_char);
-// 	}
-
-// 	return (0);
-// }

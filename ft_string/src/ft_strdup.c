@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
+/*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 05:14:00 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/07/14 09:28:33 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/12/10 16:27:35 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,3 @@ char	*ft_strdup(const char *s)
 	*tmp = '\0';
 	return (p);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-// 	char	*c;
-// 	char	*d;
-
-// 	c = "1234567890";
-// 	d = ft_strdup(c);
-// 	printf("%s", ft_strdup(c));
-// 	free(d);
-// 	return (0);
-// }

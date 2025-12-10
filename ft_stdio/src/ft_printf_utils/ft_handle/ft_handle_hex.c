@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_handle_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kei2003730 <kei2003730@student.42.fr>      +#+  +:+       +#+        */
+/*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 16:11:09 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/07/14 11:56:43 by kei2003730       ###   ########.fr       */
+/*   Updated: 2025/12/10 16:29:11 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,3 @@ void	ft_handle_hex_upper(t_conv_spec *conv_info, unsigned int u_num)
 	conv_info->output_str = converted_u_num;
 	conv_info->output_length = ft_strlen_printf(converted_u_num);
 }
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char	*ptr = malloc(1);
-// 	printf("%s", ft_ptoa(ptr));
-// 	return (0);
-// }
