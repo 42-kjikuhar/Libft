@@ -6,13 +6,12 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:44:24 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/12/10 21:06:26 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:22:07 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef FD_PRINTF_UTILS_H
-# define FD_PRINTF_UTILS_H
+#ifndef FT_PRINTF_UTILS_H
+# define FT_PRINTF_UTILS_H
 
 # include <limits.h>
 # include <stdarg.h>
