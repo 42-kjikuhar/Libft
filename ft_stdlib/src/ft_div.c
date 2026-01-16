@@ -6,15 +6,15 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 16:54:11 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/12/10 21:06:25 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:19:11 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
 
-ft_div_t	ft_div(int numer, int denom)
+t_ft_div	ft_div(int numer, int denom)
 {
-	ft_div_t	d;
+	t_ft_div	d;
 
 	d.quot = numer / denom;
 	d.rem = numer % denom;

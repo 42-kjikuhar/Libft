@@ -6,15 +6,15 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 16:56:09 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/12/10 21:06:25 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:19:13 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
 
-ft_lldiv_t	ft_lldiv(long long numer, long long denom)
+t_ft_lldiv	ft_lldiv(long long numer, long long denom)
 {
-	ft_lldiv_t	d;
+	t_ft_lldiv	d;
 
 	d.quot = numer / denom;
 	d.rem = numer % denom;

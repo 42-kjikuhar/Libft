@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 00:00:00 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/12/10 21:06:25 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:19:14 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ TEST_INIT();
 static void	test_basic_division(void)
 {
 	div_t		std_result;
-	ft_div_t	ft_result;
+	t_ft_div	ft_result;
 
 	TEST_SECTION("Basic Division");
 	std_result = div(10, 3);
@@ -36,7 +36,7 @@ static void	test_basic_division(void)
 static void	test_negative_division(void)
 {
 	div_t		std_result;
-	ft_div_t	ft_result;
+	t_ft_div	ft_result;
 
 	TEST_SECTION("Negative Division");
 	std_result = div(-10, 3);
@@ -56,7 +56,7 @@ static void	test_negative_division(void)
 static void	test_zero_dividend(void)
 {
 	div_t		std_result;
-	ft_div_t	ft_result;
+	t_ft_div	ft_result;
 
 	TEST_SECTION("Zero Dividend");
 	std_result = div(0, 5);
@@ -68,7 +68,7 @@ static void	test_zero_dividend(void)
 static void	test_exact_division(void)
 {
 	div_t		std_result;
-	ft_div_t	ft_result;
+	t_ft_div	ft_result;
 
 	TEST_SECTION("Exact Division");
 	std_result = div(15, 5);

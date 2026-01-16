@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 00:00:00 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/12/10 21:06:25 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:19:14 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ TEST_INIT();
 static void	test_basic_division(void)
 {
 	ldiv_t		std_result;
-	ft_ldiv_t	ft_result;
+	t_ft_ldiv	ft_result;
 
 	TEST_SECTION("Basic Division");
 	std_result = ldiv(100L, 7L);
@@ -35,7 +35,7 @@ static void	test_basic_division(void)
 static void	test_negative_division(void)
 {
 	ldiv_t		std_result;
-	ft_ldiv_t	ft_result;
+	t_ft_ldiv	ft_result;
 
 	TEST_SECTION("Negative Division");
 	std_result = ldiv(-100L, 7L);
@@ -51,7 +51,7 @@ static void	test_negative_division(void)
 static void	test_zero_dividend(void)
 {
 	ldiv_t		std_result;
-	ft_ldiv_t	ft_result;
+	t_ft_ldiv	ft_result;
 
 	TEST_SECTION("Zero Dividend");
 	std_result = ldiv(0L, 5L);
@@ -63,7 +63,7 @@ static void	test_zero_dividend(void)
 static void	test_large_numbers(void)
 {
 	ldiv_t		std_result;
-	ft_ldiv_t	ft_result;
+	t_ft_ldiv	ft_result;
 
 	TEST_SECTION("Large Numbers");
 	std_result = ldiv(123456789L, 123L);
