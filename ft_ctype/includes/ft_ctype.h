@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 17:13:00 by kei2003730        #+#    #+#             */
-/*   Updated: 2025/12/10 20:58:35 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:13:19 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static const ft_ctype_mask_t ft_ctype_table[256] = {
 /*─── 関数宣言 ─────────────────────────────────────────*/
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
-int ft_isascii(int c);
+int	ft_isascii(int c);
 int	ft_iscntrl(int c);
 int	ft_isdigit(int c);
 int	ft_islower(int c);

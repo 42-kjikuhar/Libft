@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 15:45:00 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/12/10 21:07:06 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/16 14:14:32 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,16 @@
  *
  * Return: 0 if str ends with suffix, otherwise the difference
  */
-int	ft_strrcmp(const char *str, const char *suffix) {
-  size_t str_len;
-  size_t suffix_len;
+int	ft_strrcmp(const char *str, const char *suffix)
+{
+	size_t	str_len;
+	size_t	suffix_len;
 
-  if (!str || !suffix)
-    return (0);
-  str_len = ft_strlen(str);
-  suffix_len = ft_strlen(suffix);
-  if (suffix_len > str_len)
-    return (-1);
-  return (ft_strncmp(str + str_len - suffix_len, suffix, suffix_len));
+	if (!str || !suffix)
+		return (0);
+	str_len = ft_strlen(str);
+	suffix_len = ft_strlen(suffix);
+	if (suffix_len > str_len)
+		return (-1);
+	return (ft_strncmp(str + str_len - suffix_len, suffix, suffix_len));
 }
