@@ -6,11 +6,12 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 21:07:45 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:59:54 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/21 10:51:10 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
 /* Locate substring in a string with length limit */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -23,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return (NULL);
 	little_len = ft_strlen(little);
 	if (little_len == 0)
-		return ((char *)big);
+		return ((char *)(uintptr_t)big);
 	if (len == 0 || little_len > len)
 		return (NULL);
 	i = 0;
@@ -33,7 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (i + j < len && little[j] && big[i + j] == little[j])
 			j++;
 		if (little[j] == '\0')
-			return ((char *)&big[i]);
+			return ((char *)(uintptr_t)&big[i]);
 		i++;
 	}
 	return (NULL);
