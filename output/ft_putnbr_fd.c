@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:33:56 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:59:06 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/21 10:38:22 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
-		return (write(fd, "-2147483648", 11), (void)0);
-	if (n < 0)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+		if (n < 0)
 	{
 		write(fd, "-", 1);
 		n *= -1;
