@@ -6,14 +6,15 @@
 #    By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 16:00:02 by kjikuhar          #+#    #+#              #
-#    Updated: 2026/01/21 10:42:22 by kjikuhar         ###   ########.fr        #
+#    Updated: 2026/01/22 14:18:31 by kjikuhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		:=	cc
 RM		:=	rm -f
 CFLAGS	:=	-Wall -Wextra -Werror -Wpedantic -Wshadow -Wformat=2 -Wcast-align \
-				-Wcast-qual -I.
+				-Wcast-qual -Wwrite-strings -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes \
+				-Wmissing-declarations -Wswitch-enum -Wswitch-default -I.
 NAME	:=	libft.a
 
 SRCS	=	conversion/ft_atoi.c \

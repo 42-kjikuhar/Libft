@@ -6,9 +6,11 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:20:17 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:57:37 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/21 10:57:10 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

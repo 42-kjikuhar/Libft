@@ -6,10 +6,11 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:11:06 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:57:26 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/21 10:56:42 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int	ft_isalpha(int c)
 {
 	return ((unsigned)(c | 0x20) - 'a' < 26);

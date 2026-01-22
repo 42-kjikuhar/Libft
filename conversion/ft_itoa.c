@@ -6,16 +6,16 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 11:55:06 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:57:13 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/01/21 11:02:46 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* Convert the integer 'n'to a ASCII string */
-static int	number_len_(int number)
+static size_t	number_len_(int number)
 {
-	int	number_len;
+	size_t	number_len;
 
 	number_len = 1;
 	if (number == INT_MIN)
@@ -35,7 +35,7 @@ static int	number_len_(int number)
 	return (number_len);
 }
 
-static char	*ft_strcpy(char *dest, char *src)
+static char	*ft_strcpy(char *dest, const char *src)
 {
 	int	i;
 
@@ -70,10 +70,10 @@ char	*ft_itoa(int n)
 	dest_str[i + 1] = '\0';
 	while (n >= 10)
 	{
-		dest_str[i] = n % 10 + '0';
+		dest_str[i] = (char)(n % 10 + '0');
 		n /= 10;
 		i--;
 	}
-	dest_str[i] = n % 10 + '0';
+	dest_str[i] = (char)(n % 10 + '0');
 	return (dest_str);
 }
