@@ -70,22 +70,6 @@ static char	*ft_strdup_for_split(char const **src, char delimiter)
 	return (dest);
 }
 
-/* Helper function to free allocated strings in case of error */
-static void	free_split_result(char **arr)
-{
-	char	**temp;
-
-	if (!arr)
-		return ;
-	temp = arr;
-	while (*temp)
-	{
-		free(*temp);
-		temp++;
-	}
-	free(arr);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**splitted;
@@ -105,7 +89,7 @@ char	**ft_split(char const *s, char c)
 			break ;
 		*splitted = ft_strdup_for_split(&s, c);
 		if (!*splitted)
-			return (free_split_result(p), NULL);
+			return (ft_free_split(p), NULL);
 		splitted++;
 	}
 	*splitted = NULL;
