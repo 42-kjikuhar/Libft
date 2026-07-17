@@ -29,7 +29,7 @@ CFLAGS	:=	-Wall -Wextra -Werror \
 
 NAME	:=	libft.a
 
-SRCS	=	conversion/ft_atoi.c \
+SRCS	:=	conversion/ft_atoi.c \
 			conversion/ft_itoa.c \
 			conversion/ft_tolower.c \
 			conversion/ft_toupper.c \
@@ -102,7 +102,7 @@ REVERSE	:=	\033[7m
 HIDDEN	:=	\033[8m
 PINK	:=	\033[35m
 
-OBJS	=	$(SRCS:.c=.o)
+OBJS	:=	$(SRCS:.c=.o)
 
 all:		$(NAME)
 
