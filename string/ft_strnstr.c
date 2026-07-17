@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (i + j < len && little[j] && big[i + j] == little[j])
 			j++;
 		if (little[j] == '\0')
-			return ((char *)(uintptr_t)&big[i]);
+			return ((char *)(uintptr_t)(big + i));
 		i++;
 	}
 	return (NULL);

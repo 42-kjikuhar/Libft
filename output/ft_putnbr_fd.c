@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-2147483648", 11);
 		return ;
 	}
-		if (n < 0)
+	if (n < 0)
 	{
 		write(fd, "-", 1);
 		n *= -1;
