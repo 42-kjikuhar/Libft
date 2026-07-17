@@ -92,13 +92,13 @@ $(NAME):	$(OBJS)
 			ar crs $(NAME) $(OBJS)
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c -o $@ $^
+	$(CC) $(CFLAGS) -c -o $@ $^
 
 clean:
-			@$(RM) $(OBJS)
+			$(RM) $(OBJS)
 
 fclean:		clean
-			@$(RM) $(NAME)
+			$(RM) $(NAME)
 
 re:			fclean all
 
