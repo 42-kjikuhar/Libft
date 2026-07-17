@@ -6,13 +6,13 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 18:12:36 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 15:41:22 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:57 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(const char c)
+int	ft_isspace(char c)
 {
 	return (c == '\a' || c == '\b' || c == '\t' || c == '\n' || c == '\v'
 		|| c == '\f' || c == '\r' || c == ' ');

@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 21:07:45 by kjikuhar          #+#    #+#             */
-/*   Updated: 2026/01/21 10:51:10 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:43 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdint.h>
 
 /* Locate substring in a string with length limit */
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(char const *big, char const *little, size_t len)
 {
 	size_t	i;
 	size_t	j;

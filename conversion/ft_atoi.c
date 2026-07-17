@@ -6,13 +6,13 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:08:27 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 15:37:25 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:30:48 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char const *str)
 {
 	int	sign;
 	int	num;

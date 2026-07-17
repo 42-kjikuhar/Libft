@@ -6,13 +6,13 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 05:14:00 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 15:42:45 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:17 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char const *s)
 {
 	char	*tmp;
 	char	*p;

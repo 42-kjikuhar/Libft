@@ -6,13 +6,13 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 17:16:39 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/11/14 17:22:23 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:28 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin3(const char *s1, const char *s2, const char *s3)
+char	*ft_strjoin3(char const *s1, char const *s2, char const *s3)
 {
 	size_t	s1_len;
 	size_t	s2_len;

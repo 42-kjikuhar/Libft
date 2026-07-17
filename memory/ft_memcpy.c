@@ -13,15 +13,15 @@
 #include "libft.h"
 
 /* When memory regions may overlap, you should use memmove instead of memcpy */
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, void const *src, size_t n)
 {
 	unsigned char		*dest_str;
-	const unsigned char	*src_str;
+	unsigned char const	*src_str;
 
 	if (n == 0 || dest == src)
 		return (dest);
 	dest_str = (unsigned char *)dest;
-	src_str = (const unsigned char *)src;
+	src_str = (unsigned char const *)src;
 	while (n--)
 		*(dest_str++) = *(src_str++);
 	return (dest);

@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 21:03:19 by kjikuhar          #+#    #+#             */
-/*   Updated: 2026/01/21 10:50:47 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:14 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdint.h>
 
 /* Locate first occurrence of character in string */
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char const *s, int c)
 {
 	unsigned char	uc;
 

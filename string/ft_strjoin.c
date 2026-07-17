@@ -6,13 +6,13 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 20:47:54 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:59:34 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:20 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcat(char *dest, const char *src)
+static char	*ft_strcat(char *dest, char const *src)
 {
 	size_t	i;
 	size_t	j;
@@ -30,7 +30,7 @@ static char	*ft_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-static char	*ft_strcpy(char *dest, const char *src)
+static char	*ft_strcpy(char *dest, char const *src)
 {
 	size_t	i;
 

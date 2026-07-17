@@ -14,11 +14,11 @@
 #include <stdint.h>
 
 /* search by decrement loop */
-void	*ft_memrchr(const void *s, int c, size_t n)
+void	*ft_memrchr(void const *s, int c, size_t n)
 {
-	const unsigned char	*us;
+	unsigned char const	*us;
 
-	us = (const unsigned char *)s;
+	us = (unsigned char const *)s;
 	while (n--)
 		if (us[n] == (unsigned char)c)
 			return ((void *)(uintptr_t)(us + n));

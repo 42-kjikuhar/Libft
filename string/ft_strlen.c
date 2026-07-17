@@ -6,13 +6,13 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 22:06:53 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:59:42 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:36 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(char const *s)
 {
 	size_t	length;
 

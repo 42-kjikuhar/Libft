@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 11:55:06 by kjikuhar          #+#    #+#             */
-/*   Updated: 2026/01/21 11:02:46 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:30:52 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static size_t	number_len_(int number)
 	return (number_len);
 }
 
-static char	*ft_strcpy(char *dest, const char *src)
+static char	*ft_strcpy(char *dest, char const *src)
 {
 	int	i;
 

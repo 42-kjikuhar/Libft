@@ -6,14 +6,14 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 22:22:54 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:59:51 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2026/07/17 20:31:40 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* Compare two strings up to n characters */
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(char const *s1, char const *s2, size_t n)
 {
 	size_t	i;
 
