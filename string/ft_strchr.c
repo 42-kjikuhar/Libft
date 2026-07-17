@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 14:16:34 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:58:58 by kjikuhar         ###   ########.fr       */
+/*   Created: 2025/04/25 21:03:19 by kjikuhar          #+#    #+#             */
+/*   Updated: 2026/01/21 10:50:47 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
-void	ft_putchar_fd(char c, int fd)
+/* Locate first occurrence of character in string */
+char	*ft_strchr(const char *s, int c)
 {
-	write(fd, &c, 1);
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
+	while (*s)
+	{
+		if (*s == uc)
+			return ((char *)(uintptr_t)s);
+		s++;
+	}
+	if (uc == 0)
+		return ((char *)(uintptr_t)s);
+	return (NULL);
 }

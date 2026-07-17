@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 14:16:34 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:58:58 by kjikuhar         ###   ########.fr       */
+/*   Created: 2025/04/24 22:22:54 by kjikuhar          #+#    #+#             */
+/*   Updated: 2025/09/29 14:59:51 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+/* Compare two strings up to n characters */
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	write(fd, &c, 1);
+	size_t	i;
+
+	i = 0;
+	while (i < n && (s1[i] || s2[i]))
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
 }

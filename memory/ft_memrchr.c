@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 14:16:34 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:58:58 by kjikuhar         ###   ########.fr       */
+/*   Created: 2025/05/05 18:16:23 by kjikuhar          #+#    #+#             */
+/*   Updated: 2026/01/21 10:50:45 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
-void	ft_putchar_fd(char c, int fd)
+/* search by decrement loop */
+void	*ft_memrchr(const void *s, int c, size_t n)
 {
-	write(fd, &c, 1);
+	const unsigned char	*us;
+
+	us = (const unsigned char *)s;
+	while (n--)
+		if (us[n] == (unsigned char)c)
+			return ((void *)(uintptr_t)(us + n));
+	return (NULL);
 }

@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_sort_int_array.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 14:16:34 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:58:58 by kjikuhar         ###   ########.fr       */
+/*   Created: 2025/11/11 01:30:00 by kjikuhar          #+#    #+#             */
+/*   Updated: 2025/11/11 02:33:12 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_sort_int_array(int *array, size_t len)
 {
-	write(fd, &c, 1);
+	if (!array || len <= 1)
+		return ;
+	ft_qsort_int(array, 0, (int)len - 1);
 }

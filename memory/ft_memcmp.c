@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 14:16:34 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/09/29 14:58:58 by kjikuhar         ###   ########.fr       */
+/*   Created: 2025/04/25 18:41:27 by kjikuhar          #+#    #+#             */
+/*   Updated: 2026/01/21 10:50:01 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	write(fd, &c, 1);
+	const unsigned char	*s1_str;
+	const unsigned char	*s2_str;
+
+	s1_str = (const unsigned char *)s1;
+	s2_str = (const unsigned char *)s2;
+	while (n--)
+	{
+		if (*s1_str != *s2_str)
+			return (*s1_str - *s2_str);
+		s1_str++;
+		s2_str++;
+	}
+	return (0);
 }

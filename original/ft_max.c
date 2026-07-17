@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 18:09:27 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/05/18 19:32:11 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2025/11/09 23:05:59 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,10 @@ size_t	ft_max_size_t(size_t a, size_t b)
 		return (a);
 }
 
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	int tabs[] = {0, 1, 2, 3, 4, 5};
-
-// 	printf("%d\n", ft_max_int(tabs[3], tabs[1]));
-// }
+unsigned int	ft_max_unsigned_int(unsigned int a, unsigned int b)
+{
+	if (a <= b)
+		return (b);
+	else
+		return (a);
+}

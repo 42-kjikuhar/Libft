@@ -6,113 +6,72 @@
 #    By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 16:00:02 by kjikuhar          #+#    #+#              #
-#    Updated: 2025/08/08 18:38:05 by kjikuhar         ###   ########.fr        #
+#    Updated: 2026/01/22 14:18:31 by kjikuhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		=	cc
-RM		=	rm -f
-CFLAGS	=	-Wall -Wextra -Werror -I.
-NAME	=	libft.a
+CC		:=	cc
+RM		:=	rm -f
+CFLAGS	:=	-Wall -Wextra -Werror -Wpedantic -Wshadow -Wformat=2 -Wcast-align \
+				-Wcast-qual -Wwrite-strings -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes \
+				-Wmissing-declarations -Wswitch-enum -Wswitch-default -I.
+NAME	:=	libft.a
 
-# サブライブラリ
-CTYPE_LIB	=	ft_ctype/ctype.a
-STRINGS_LIB	=	ft_strings/strings.a
-STRING_LIB	=	ft_string/ft_string.a
-STDIO_LIB	=	ft_stdio/ft_stdio.a
-STDLIB_LIB	=	ft_stdlib/ft_stdlib.a
-LIST_LIB	=	ft_list/ft_list.a
+SRCS	=	conversion/ft_atoi.c \
+			conversion/ft_itoa.c \
+			conversion/ft_tolower.c \
+			conversion/ft_toupper.c \
+			judge/ft_isalnum.c \
+			judge/ft_isalpha.c \
+			judge/ft_isascii.c \
+			judge/ft_isdigit.c \
+			judge/ft_isprint.c \
+			list/ft_lstadd_back.c \
+			list/ft_lstadd_front.c \
+			list/ft_lstclear.c \
+			list/ft_lstdelone.c \
+			list/ft_lstiter.c \
+			list/ft_lstlast.c \
+			list/ft_lstmap.c \
+			list/ft_lstnew.c \
+			list/ft_lstsize.c \
+			memory/ft_bzero.c \
+			memory/ft_calloc.c \
+			memory/ft_memchr.c \
+			memory/ft_memcmp.c \
+			memory/ft_memcpy.c \
+			memory/ft_memmove.c \
+			memory/ft_memrchr.c \
+			memory/ft_memset.c \
+			output/ft_putchar_fd.c \
+			output/ft_putendl_fd.c \
+			output/ft_putnbr_fd.c \
+			output/ft_putstr_fd.c \
+			string/ft_free_split.c \
+			string/ft_split.c \
+			string/ft_strchr.c \
+			string/ft_strdup.c \
+			string/ft_striteri.c \
+			string/ft_strjoin.c \
+			string/ft_strjoin3.c \
+			string/ft_strlcat.c \
+			string/ft_strlcpy.c \
+			string/ft_strlen.c \
+			string/ft_strmapi.c \
+			string/ft_strncmp.c \
+			string/ft_strnstr.c \
+			string/ft_strrchr.c \
+			string/ft_strtrim.c \
+			string/ft_substr.c \
+			original/ft_swap.c \
+			original/ft_max.c \
+			original/ft_min.c \
+			original/ft_isspace.c \
+			original/is_blank_line.c \
+			sort/ft_sort_int_array.c \
+			sort/ft_qsort_int.c \
+			sort/ft_partition_int.c
 
-# 将来追加予定の個別ファイル（コメントアウト）
-# SRCS	=	conversion/ft_atoi.c \
-#			conversion/ft_itoa.c \
-#			...
-
-OBJS	=	$(SRCS:.c=.o)
-
-all:		$(NAME)
-
-# サブライブラリのビルド
-$(CTYPE_LIB):
-	@echo "$(CYAN)$(BOLD)Building ctype library...$(RESET)"
-	@$(MAKE) -C ft_ctype
-
-$(STRINGS_LIB):
-	@echo "$(CYAN)$(BOLD)Building strings library...$(RESET)"
-	@$(MAKE) -C ft_strings
-
-$(STRING_LIB):
-	@echo "$(CYAN)$(BOLD)Building string library...$(RESET)"
-	@$(MAKE) -C ft_string
-
-$(STDIO_LIB):
-	@echo "$(CYAN)$(BOLD)Building stdio library...$(RESET)"
-	@$(MAKE) -C ft_stdio
-
-$(STDLIB_LIB):
-	@echo "$(CYAN)$(BOLD)Building stdio library...$(RESET)"
-	@$(MAKE) -C ft_stdlib
-
-$(LIST_LIB):
-	@echo "$(CYAN)$(BOLD)Building stdio library...$(RESET)"
-	@$(MAKE) -C ft_list
-
-# メインライブラリの作成（サブライブラリのみ）
-$(NAME):	$(CTYPE_LIB) $(STRINGS_LIB) $(STRING_LIB) $(STDIO_LIB) $(STDLIB_LIB) $(LIST_LIB)
-			@echo "$(MAGENTA)$(BOLD)Creating unified libft.a...$(RESET)"
-			@cp $(CTYPE_LIB) $(NAME)
-			@ar x $(STRINGS_LIB)
-			@ar rcs $(NAME) *.o
-			@$(RM) *.o
-			@ar x $(STRING_LIB)
-			@ar rcs $(NAME) *.o
-			@$(RM) *.o
-			@ar x $(STDIO_LIB)
-			@ar rcs $(NAME) *.o
-			@$(RM) *.o
-			@echo "Compiled with $(GREEN)$(BOLD)$(CFLAGS)$(RESET)"
-			@echo "$(YELLOW)$(BOLD)========================================="
-			@echo "        You can use My $(NAME)!!"
-			@echo "        (Including ctype + strings + string + stdio)"
-			@echo "=========================================$(RESET)"
-
-# =========================================
-#         You can use My libft.a!!
-# =========================================
-
-%.o: %.c
-	@echo "Compiled ✅ $(CYAN) $(BOLD) $^ $(RESET)"
-	@$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $^
-
-clean:
-			@$(MAKE) -C ft_ctype clean
-			@$(MAKE) -C ft_strings clean
-			@$(MAKE) -C ft_string clean
-			@$(MAKE) -C ft_stdio clean
-			@$(MAKE) -C ft_stdlib clean
-			@$(MAKE) -C ft_list clean
-
-fclean:		clean
-			@$(RM) $(NAME)
-			@$(MAKE) -C ft_ctype fclean
-			@$(MAKE) -C ft_strings fclean
-			@$(MAKE) -C ft_string fclean
-			@$(MAKE) -C ft_stdio fclean
-			@$(MAKE) -C ft_stdlib fclean
-			@$(MAKE) -C ft_list fclean
-
-re:			fclean all
-
-test:
-	$(MAKE) -C ft_ctype test
-	$(MAKE) -C ft_strings test
-	$(MAKE) -C ft_string test
-	$(MAKE) -C ft_stdio test
-	$(MAKE) -C ft_stdlib test
-
-.PHONY:		all clean fclean re test
-
-# カラーコード
 BLACK	:=	\033[30m
 RED		:=	\033[31m
 GREEN	:=	\033[32m
@@ -123,3 +82,39 @@ CYAN	:=	\033[36m
 WHITE	:=	\033[37m
 RESET	:=	\033[0m
 BOLD	:=	\033[1m
+DIM		:=	\033[2m
+ITALIC	:=	\033[3m
+UNDER	:=	\033[4m
+BLINK	:=	\033[5m
+REVERSE	:=	\033[7m
+HIDDEN	:=	\033[8m
+PINK	:=	\033[35m
+
+OBJS	=	$(SRCS:.c=.o)
+
+all:		$(NAME)
+
+$(NAME):	$(OBJS)
+			@echo "Compiled with $(GREEN)$(BOLD)$(CFLAGS)$(RESET)"
+			@ar crs $(NAME) $(OBJS)
+			@echo "$(YELLOW)$(BOLD)========================================="
+			@echo "        You can use My $(NAME)!!"
+			@echo "=========================================$(RESET)"
+
+# =========================================
+#         You can use My libft.a!!
+# =========================================
+
+%.o: %.c
+	@echo "Compiled ✅ $(CYAN) $(BOLD) $^ $(RESET)"
+	@$(CC) $(CFLAGS) -c -o $@ $^
+
+clean:
+			@$(RM) $(OBJS)
+
+fclean:		clean
+			@$(RM) $(NAME)
+
+re:			fclean all
+
+.PHONY:		all clean fclean re

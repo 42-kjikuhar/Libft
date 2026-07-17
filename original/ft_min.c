@@ -6,7 +6,7 @@
 /*   By: kjikuhar <kjikuhar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 18:05:03 by kjikuhar          #+#    #+#             */
-/*   Updated: 2025/05/11 18:09:12 by kjikuhar         ###   ########.fr       */
+/*   Updated: 2025/11/09 23:05:58 by kjikuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,10 @@ size_t	ft_min_size_t(size_t a, size_t b)
 		return (a);
 }
 
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	int tabs[] = {0, 1, 2, 3, 4, 5};
-
-// 	printf("%d\n", ft_min_int(tabs[3], tabs[1]));
-// }
+unsigned int	ft_min_unsigned_int(unsigned int a, unsigned int b)
+{
+	if (a >= b)
+		return (b);
+	else
+		return (a);
+}
