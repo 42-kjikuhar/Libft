@@ -12,9 +12,21 @@
 
 CC		:=	cc
 RM		:=	rm -f
-CFLAGS	:=	-Wall -Wextra -Werror -Wpedantic -Wshadow -Wformat=2 -Wcast-align \
-				-Wcast-qual -Wwrite-strings -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes \
-				-Wmissing-declarations -Wswitch-enum -Wswitch-default -I.
+CFLAGS	:=	-Wall -Wextra -Werror \
+			-Wpedantic \
+			-Wshadow \
+			-Wformat=2 \
+			-Wcast-align \
+			-Wcast-qual \
+			-Wwrite-strings \
+			-Wpointer-arith \
+			-Wstrict-prototypes \
+			-Wmissing-prototypes \
+			-Wmissing-declarations \
+			-Wswitch-enum \
+			-Wswitch-default \
+			-I.
+
 NAME	:=	libft.a
 
 SRCS	=	conversion/ft_atoi.c \
