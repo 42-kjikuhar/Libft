@@ -84,41 +84,14 @@ SRCS	:=	conversion/ft_atoi.c \
 			sort/ft_qsort_int.c \
 			sort/ft_partition_int.c
 
-BLACK	:=	\033[30m
-RED		:=	\033[31m
-GREEN	:=	\033[32m
-YELLOW	:=	\033[33m
-BLUE	:=	\033[96m
-MAGENTA	:=	\033[38;5;206m
-CYAN	:=	\033[36m
-WHITE	:=	\033[37m
-RESET	:=	\033[0m
-BOLD	:=	\033[1m
-DIM		:=	\033[2m
-ITALIC	:=	\033[3m
-UNDER	:=	\033[4m
-BLINK	:=	\033[5m
-REVERSE	:=	\033[7m
-HIDDEN	:=	\033[8m
-PINK	:=	\033[35m
-
 OBJS	:=	$(SRCS:.c=.o)
 
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-			@echo "Compiled with $(GREEN)$(BOLD)$(CFLAGS)$(RESET)"
-			@ar crs $(NAME) $(OBJS)
-			@echo "$(YELLOW)$(BOLD)========================================="
-			@echo "        You can use My $(NAME)!!"
-			@echo "=========================================$(RESET)"
-
-# =========================================
-#         You can use My libft.a!!
-# =========================================
+			ar crs $(NAME) $(OBJS)
 
 %.o: %.c
-	@echo "Compiled ✅ $(CYAN) $(BOLD) $^ $(RESET)"
 	@$(CC) $(CFLAGS) -c -o $@ $^
 
 clean:
